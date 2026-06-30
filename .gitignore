@@ -1,0 +1,8 @@
+outputs/
+*.fits
+*.csv
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+checkpoints/
