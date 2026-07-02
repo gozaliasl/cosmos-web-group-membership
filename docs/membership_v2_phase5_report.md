@@ -33,6 +33,20 @@ Script: `scripts/pipeline/membership_v2_phase5_mock_lightcone.py`.
 731 mock (halo x completeness) observations were built and passed through
 the full recovery chain.
 
+**Scope limitation, added post-hoc per the independent referee review
+(`REFEREE_REVIEW_membership_v2.md`, item 6)**: the task requested an
+external, published, group-specific sigma_v-M200 calibration for
+lower-mass systems as one of four calibration categories to test. This was
+**not delivered**. `tng_selfcal_all` and `tng_selfcal_groups` are
+**internal, in-sample fits to this project's own TNG data**, substituted
+for that requirement to avoid citing an external group-scale relation
+without full confidence in its exact published parameters (stated at the
+time, but not flagged prominently enough in the original report). They
+should be read as **internal alternatives/sensitivity checks, not as
+literature replacements** — no genuine external group-specific calibration
+has yet been tested against this pipeline. This is an open gap, not a
+result.
+
 ## 2. Mass recovery results
 
 ### 2a. Idealized control (no contamination, no incompleteness, no z-error)
@@ -171,15 +185,19 @@ retaining, or simply swapping, a single global power law.
 
 **Overall**: keep Munari et al. (2013) as the *documented interim*
 placeholder (unchanged from D7) rather than replacing it with any of the
-three alternatives tested here, since none is demonstrably superior across
-conditions — but this mock test provides direct evidence that **the
-dynamical-mass branch of the pipeline (any calibration) carries ~0.5 dex
-scatter and 40-65% catastrophic-failure risk for individual groups in this
-survey's richness/mass/redshift regime**, and that fixing this requires a
-mock-observed (not ground-truth) recalibration with explicit mass/redshift
-dependence — a larger undertaking than swapping one power law for another,
-and outside the scope that can be completed by tuning membership/aperture
-methodology alone (consistent with D13).
+three alternatives tested here. This is a decision to **retain an
+acceptable interim default because no tested alternative is a demonstrated
+improvement — not a finding that Munari is uniquely correct or optimal**
+(only two internal TNG self-calibrations and one external cluster-scale
+relation were compared against it; no external group-specific calibration
+was tested, see the scope limitation above). This mock test provides direct
+evidence that **the dynamical-mass branch of the pipeline (any calibration
+tested) carries ~0.5 dex scatter and 40-65% catastrophic-failure risk for
+individual groups in this survey's richness/mass/redshift regime**, and
+that fixing this requires a mock-observed (not ground-truth) recalibration
+with explicit mass/redshift dependence — a larger undertaking than swapping
+one power law for another, and outside the scope that can be completed by
+tuning membership/aperture methodology alone (consistent with D13).
 
 ## Reproducibility
 
